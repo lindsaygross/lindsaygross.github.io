@@ -190,6 +190,7 @@ h1 {
   border: 1px solid var(--border);
   border-radius: 1rem;
   padding: 1.5rem;
+  align-self: start;
 }
 
 .about-timeline ul {
