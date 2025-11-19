@@ -24,7 +24,6 @@
             <li><a href="#about">About</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#writing">Writing</a></li>
-            <li><a href="#speaking">Speaking</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
         </nav>
@@ -35,18 +34,18 @@
       <section id="home" class="hero">
         <div class="container hero-grid">
           <div>
-            <p class="eyebrow">AI product management & trust and safety</p>
-            <h1>Building responsible AI products that ship</h1>
+            <h1>Building AI that is safe, useful, and engineered for impact.</h1>
             <p class="subheadline">
               AI engineer and product builder at Duke who works at the intersection of safety, governance, and user experience.
             </p>
             <div class="hero-ctas">
               <a class="btn primary" href="#projects">View selected projects</a>
-              <a class="btn secondary" href="https://example.com/resume.pdf" target="_blank" rel="noreferrer">Download resume</a>
+              <a class="btn secondary" href="assets/LINDSAY GROSS copy.pdf" target="_blank">Download Resume</a>
+
             </div>
           </div>
           <div class="hero-media" aria-hidden="true">
-            <img src="assets/profile.jpg" alt="Portrait of Lindsay Gross" />
+            <img src="assets/chapel%209%20copy.jpg" alt="Lindsay Gross headshot" />
           </div>
         </div>
       </section>
@@ -55,22 +54,39 @@
         <div class="container">
           <div class="section-heading">
             <p class="eyebrow">About</p>
-            <h2>Systems thinker with policy and engineering fluency</h2>
+            <h2>About me</h2>
           </div>
           <div class="about-content">
             <div class="about-text">
               <p>
-                I am a Master of Engineering candidate in Artificial Intelligence at Duke where I design, train, and evaluate machine learning systems—from structured data pipelines and explainable ML models to RL, deep learning, LLM fine-tuning, and AI agents that support safety workflows.
+                I build AI systems and products that people can trust. I am a Master of Engineering student in Artificial Intelligence at Duke, with a background in Public Policy and Digital Intelligence. My work sits at the intersection of machine learning, trust and safety, and human centered design.
               </p>
               <p>
-                Before pivoting into AI engineering I earned a BA in Public Policy with a Digital Intelligence Certificate and Minor in Spanish. That lens grounds every product decision in governance realities and user outcomes, so I can stress test features, trust layers, and mitigations before they reach production.
+                I started on the policy side, studying how technology shapes society and where guardrails fail. But watching AI move faster than regulation convinced me that the most meaningful impact happens inside the product cycle, not after it. I learned AI engineering so I could understand these systems at the level of models, data pipelines, and failure modes, and use that knowledge to shape how AI is built and deployed.
               </p>
               <p>
-                My sweet spot is translating between technical, product, policy, and legal stakeholders. I prototype with engineers, articulate risk to executives, and align with trust and safety partners so responsible AI work becomes shippable.
+                That shift defines my work today. I prototype, analyze, and ship projects that combine technical depth with responsible-AI judgment. I have built explainability tools, risk assessment frameworks, and AI driven features that prioritize clarity, safety, and long term trust.
+              </p>
+              <p>My recent work includes:</p>
+              <ul class="about-list">
+                <li>Strengthening model transparency through explainability techniques like GradCAM, attention mapping, and structured evaluation.</li>
+                <li>Supporting trust and safety efforts involving AIGC detection, red teaming workflows, and improving harm classification systems.</li>
+                <li>Designing ethical onboarding frameworks for generative AI products and translating abstract principles into actionable product constraints.</li>
+                <li>Research on copyright, governance, and international regulatory approaches to emerging technologies.</li>
+                <li>Building product experiments like SafeSip, Alba/CO2ntext, Echo, and Lumina that explore where AI can enhance safety, agency, and learning.</li>
+              </ul>
+              <p>
+                I work well across engineering, research, product, and policy because I speak all of those languages. I understand how models behave under the hood, where bias originates, and how system choices affect user experience and risk. I ask pointed questions about data collection, model selection, and deployment tradeoffs. I design with users and downstream impacts in mind.
+              </p>
+              <p>
+                I care about innovation, but I care even more about how innovation is built. My goal is to develop AI products that are clear, grounded, accountable, and safe at scale. I want to help teams turn technical advances into systems that people can rely on.
+              </p>
+              <p>
+                Long term, I aspire to be a product leader who builds AI that is both powerful and responsible, and who helps others do the same.
               </p>
             </div>
             <div class="about-timeline">
-              <h3>Pathway</h3>
+              <h3>Education</h3>
               <ul>
                 <li>
                   <span class="timeline-date">May 2026</span>
@@ -90,77 +106,52 @@
         <div class="container">
           <div class="section-heading">
             <p class="eyebrow">Projects</p>
-            <h2>Responsible AI builds and experiments</h2>
+            <h2>Responsible AI projects</h2>
           </div>
           <div class="card-grid">
             <article class="card">
-              <div class="card-tag">Product concept</div>
-              <h3>SafeSip</h3>
-              <p class="tagline">Dissolvable drink spiking detection concept with rapid testing plan.</p>
-              <p>
-                Designed SafeSip to surface tampering signals inside dissolvable strips and pills with a roadmap for supply chain validation, campus pilots, and data partnerships.
-              </p>
-              <ul>
-                <li>Detection chemistry brief with lab partner requirements</li>
-                <li>Operational plan for distribution and UX testing</li>
-                <li>Risk modeling for false positives and safety escalation</li>
-              </ul>
-            </article>
-
-            <article class="card">
               <div class="card-tag">Chrome + Node</div>
-              <h3>Alba / CO2ntext</h3>
-              <p class="tagline">Chrome extension estimating energy, CO2, and water footprint of AI prompts.</p>
+              <h3>Alba</h3>
+              <p class="tagline">Chrome extension and helper server that estimates the energy, carbon, and water cost of every AI prompt.</p>
               <p>
-                Built a Chrome UI that intercepts prompt payloads, calls a Node.js emissions API, and returns actionable footprint data so users can decide when to optimize or defer requests.
+                Alba wraps ChatGPT, Gemini, and other chat surfaces with inline footprint labels, a prompt optimizer, and a floating dashboard so people can ship work while staying within a climate budget.
               </p>
               <ul>
-                <li>Extension overlay with contextual guidance</li>
-                <li>Node.js service with energy + carbon models</li>
-                <li>Usage analytics with privacy-first logging</li>
+                <li>Real-time footprint labels plus Spotify-style recaps driven by the helper server.</li>
+                <li>Inline prompt optimizer that shows projected savings before replacing a draft.</li>
+                <li>Configurable methodology via energyConfig.js so teams can adjust model profiles.</li>
               </ul>
+              <a class="text-link" href="https://github.com/lindsaygross/Alba.git" target="_blank" rel="noreferrer">View project</a>
             </article>
 
             <article class="card">
-              <div class="card-tag">Trust & Safety</div>
-              <h3>Trust and Safety systems</h3>
-              <p class="tagline">TikTok style CSAM + AIGC detection and mitigation research.</p>
+              <div class="card-tag">Streamlit + NLP</div>
+              <h3>Resume–Job Skill Gap Analyzer</h3>
+              <p class="tagline">Embeddings-powered app that compares resumes to live job postings to highlight missing skills.</p>
               <p>
-                Architected red teaming protocols, evaluated multimodal classifiers, and drafted mitigation runbooks that pair human review with automated guardrails for scaled safety coverage.
+                I vectorized resumes and postings, queried APIs such as Remotive, and surfaced alignment scores plus skill gaps in a Streamlit interface deployed on Hugging Face Spaces.
               </p>
               <ul>
-                <li>CSAM detection benchmarking and AIGC heuristics</li>
-                <li>Red teaming playbooks with escalation logic</li>
-                <li>Partnership work with All Tech Is Human, Metaphysic.ai, Tremau</li>
+                <li>OpenAI embeddings to compare applicants with hundreds of listings.</li>
+                <li>Automated parsing for PDFs/DOCX plus keyword extraction and visualization.</li>
+                <li>Altair charts that make strengths, gaps, and next steps intuitive for job seekers.</li>
               </ul>
+              <a class="text-link" href="https://github.com/lindsaygross/JobSkills-Detector.git" target="_blank" rel="noreferrer">View project</a>
             </article>
 
             <article class="card">
-              <div class="card-tag">XAI</div>
-              <h3>Explainable AI lab</h3>
-              <p class="tagline">Applied SHAP, attention maps, and counterfactual methods to NLP classifiers.</p>
+              <div class="card-tag">XAI research</div>
+              <h3>Explainable Deep Learning with Grad-CAM Variants</h3>
+              <p class="tagline">Used GradCAM, GradCAM++, and LayerCAM to visualize where CNNs focus when interpreting facial expressions.</p>
               <p>
-                Led an explainability audit of a transformer model and operationalized the insights for product, policy, and support teams so they could trust automated decisions.
+                I tuned preprocessing to improve alignment between heatmaps and the true regions that drive a prediction, improving interpretability by roughly 30% so stakeholders could trust the model.
               </p>
               <ul>
-                <li>Built SHAP dashboards surfaced in internal tools</li>
-                <li>Attention analysis for failure localization</li>
-                <li>Counterfactual generation to test mitigation hypotheses</li>
+                <li>Five-image review pipeline comparing attention maps before and after adjustments.</li>
+                <li>Structured evaluation to quantify when the model is “looking” in the right place.</li>
+                <li>Narratives that translate technical findings into product and policy guidance.</li>
               </ul>
-            </article>
-
-            <article class="card">
-              <div class="card-tag">Experiments</div>
-              <h3>Echo · Lumina · Agents</h3>
-              <p class="tagline">Rapid experiments around peer teaching, consented memory, and productivity agents.</p>
-              <p>
-                Prototyped Echo for AI powered peer learning, Lumina for collective consented knowledge graphs, and lightweight productivity agents that keep humans in control.
-              </p>
-              <ul>
-                <li>Human centered onboarding and consent flows</li>
-                <li>Graph schemas with governance annotations</li>
-                <li>Agent guardrails tied to user provided intentions</li>
-              </ul>
+              <a class="text-link" href="https://github.com/lindsaygross/explainable-deep-learning.git" target="_blank" rel="noreferrer">View project</a>
             </article>
           </div>
         </div>
@@ -170,39 +161,50 @@
         <div class="container">
           <div class="section-heading">
             <p class="eyebrow">Writing</p>
-            <h2>Selected thinking</h2>
+            <h2>Selected writing</h2>
           </div>
           <div class="card-grid writing-grid">
             <article class="card writing-card">
-              <h3>Designing for when AI fails</h3>
-              <p>Framework for treating AI failures as product failures with layered mitigations and comms plans.</p>
-              <a class="text-link" href="https://example.com/writing1" target="_blank" rel="noreferrer">Read</a>
+              <h3>Explainability Isn’t About the Output</h3>
+              <p>What Unmasking AI revealed about datasets, omissions, and the limits of post-hoc explanations.</p>
+              <a class="text-link" href="https://open.substack.com/pub/lindsaygross1/p/bias-isnt-a-bug-its-a-starting-condition?r=1g1ulu&utm_campaign=post&utm_medium=web" target="_blank" rel="noreferrer">Read</a>
             </article>
             <article class="card writing-card">
-              <h3>Babies, brains, and robot sociopaths</h3>
-              <p>Breakdown of developmental science analogies that influence how we govern emerging AI behavior.</p>
-              <a class="text-link" href="https://example.com/writing2" target="_blank" rel="noreferrer">Read</a>
+              <h3>Babies, Brains, and Robot Sociopaths</h3>
+              <p>What child development and psychopathy can teach us about building safer AI systems.</p>
+              <a class="text-link" href="https://open.substack.com/pub/lindsaygross1/p/babies-brains-and-robot-sociopaths?r=1g1ulu&utm_campaign=post&utm_medium=web" target="_blank" rel="noreferrer">Read</a>
             </article>
             <article class="card writing-card">
-              <h3>Bias is built into the foundation</h3>
-              <p>Tracing data provenance decisions that encode bias long before a model reaches deployment.</p>
-              <a class="text-link" href="https://example.com/writing3" target="_blank" rel="noreferrer">Read</a>
+              <h3>The Algorithm That Helped Me Choose to Pursue a Master of Engineering</h3>
+              <p>How thinking like a machine learning model helped me make a major career change.</p>
+              <a class="text-link" href="https://open.substack.com/pub/lindsaygross1/p/the-algorithm-that-helped-me-choose?r=1g1ulu&utm_campaign=post&utm_medium=web" target="_blank" rel="noreferrer">Read</a>
+            </article>
+            <article class="card writing-card">
+              <h3>The Antitrust Paradox in the Age of Big Tech</h3>
+              <p>How Apple, Google, Amazon, Microsoft, and Meta rewrote competition and why regulators are still playing catch-up.</p>
+              <a class="text-link" href="https://open.substack.com/pub/lindsaygross1/p/the-antitrust-paradox-in-the-age?r=1g1ulu&utm_campaign=post&utm_medium=web" target="_blank" rel="noreferrer">Read</a>
+            </article>
+            <article class="card writing-card">
+              <h3>Your Body, Their Data</h3>
+              <p>Why convenience comes with risks, and what Flo Health teaches us about privacy in an age of digital surveillance.</p>
+              <a class="text-link" href="https://open.substack.com/pub/lindsaygross1/p/your-body-their-data?r=1g1ulu&utm_campaign=post&utm_medium=web" target="_blank" rel="noreferrer">Read</a>
+            </article>
+            <article class="card writing-card">
+              <h3>The Black Box of Hiring</h3>
+              <p>Applicant tracking systems have reshaped hiring, but at what cost to fairness and equity?</p>
+              <a class="text-link" href="https://open.substack.com/pub/lindsaygross1/p/the-black-box-of-hiring?r=1g1ulu&utm_campaign=post&utm_medium=web" target="_blank" rel="noreferrer">Read</a>
+            </article>
+            <article class="card writing-card">
+              <h3>When Your Face Becomes Data</h3>
+              <p>The hidden risks and ethical dilemmas of facial recognition in everyday life.</p>
+              <a class="text-link" href="https://open.substack.com/pub/lindsaygross1/p/when-your-face-becomes-data?r=1g1ulu&utm_campaign=post&utm_medium=web" target="_blank" rel="noreferrer">Read</a>
+            </article>
+            <article class="card writing-card">
+              <h3>Deepfakes: Seeing is No Longer Believing</h3>
+              <p>Why deepfake abuse is spreading faster than our protections.</p>
+              <a class="text-link" href="https://open.substack.com/pub/lindsaygross1/p/deepfakes-seeing-is-no-longer-believing?r=1g1ulu&utm_campaign=post&utm_medium=web" target="_blank" rel="noreferrer">Read</a>
             </article>
           </div>
-        </div>
-      </section>
-
-      <section id="speaking" class="section">
-        <div class="container">
-          <div class="section-heading">
-            <p class="eyebrow">Speaking</p>
-            <h2>Talks and panels</h2>
-          </div>
-          <ul class="speaking-list">
-            <li>Guest lectures at Duke on building trust layers for AI products</li>
-            <li>Responsible tech panels on AI safety, governance, and trust and safety ops</li>
-            <li>Workshop facilitation on AI product strategy and red teaming practices</li>
-          </ul>
         </div>
       </section>
 
@@ -210,12 +212,14 @@
         <div class="container">
           <div class="section-heading">
             <p class="eyebrow">Contact</p>
-            <h2>Let’s build responsibly</h2>
+            <h2>Let’s connect</h2>
           </div>
           <div class="contact-links">
-            <a href="mailto:hello@example.com">hello@example.com</a>
-            <a href="https://www.linkedin.com/in/placeholder" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a href="mailto:lindsay.gross@duke.edu">lindsay.gross@duke.edu</a>
+            <a href="https://www.linkedin.com/in/lindsay-gross1/" target="_blank" rel="noreferrer">LinkedIn</a>
             <a href="https://github.com/lindsaygross" target="_blank" rel="noreferrer">GitHub</a>
+            <a href="https://substack.com/@lindsaygross1" target="_blank" rel="noreferrer">Substack</a>
+            <a href="assets/LINDSAY GROSS copy.pdf" target="_blank" rel="noreferrer">Resume</a>
           </div>
         </div>
       </section>
@@ -223,7 +227,7 @@
 
     <footer class="site-footer">
       <div class="container">
-        <p>© <span id="year"></span> Lindsay Gross. Built with a focus on responsible AI.</p>
+        <p>© <span id="year"></span> Lindsay Gross.</p>
         <button class="scroll-top" type="button" aria-label="Scroll to top">↑</button>
       </div>
     </footer>
