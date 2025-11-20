@@ -2,6 +2,25 @@ const navToggle = document.querySelector('.nav-toggle');
 const navMenu = document.getElementById('nav-menu');
 const scrollTopBtn = document.querySelector('.scroll-top');
 const yearEl = document.getElementById('year');
+const modeToggleBtn = document.querySelector('.mode-toggle');
+const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+
+const applyTheme = (theme, persist = false) => {
+  document.body.dataset.theme = theme;
+  if (modeToggleBtn) {
+    modeToggleBtn.setAttribute('aria-pressed', theme === 'dark');
+    modeToggleBtn.classList.toggle('is-dark', theme === 'dark');
+    const icon = modeToggleBtn.querySelector('.mode-icon');
+    if (icon) icon.textContent = theme === 'dark' ? '☀︎' : '☾';
+  }
+  if (persist) {
+    localStorage.setItem('theme', theme);
+  }
+};
+
+const savedTheme = localStorage.getItem('theme');
+const initialTheme = savedTheme || (prefersDarkScheme.matches ? 'dark' : 'light');
+applyTheme(initialTheme);
 
 if (yearEl) {
   yearEl.textContent = new Date().getFullYear();
@@ -51,3 +70,15 @@ if (scrollTopBtn) {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 }
+
+if (modeToggleBtn) {
+  modeToggleBtn.addEventListener('click', () => {
+    const nextTheme = document.body.dataset.theme === 'dark' ? 'light' : 'dark';
+    applyTheme(nextTheme, true);
+  });
+}
+
+prefersDarkScheme.addEventListener('change', (event) => {
+  if (localStorage.getItem('theme')) return;
+  applyTheme(event.matches ? 'dark' : 'light');
+});
