@@ -238,17 +238,17 @@ h3 {
 }
 
 .about-copy > * + * {
-  margin-top: 1.6rem;
+  margin-top: 1.2rem;
 }
 
 .about-copy p {
-  margin: 0;
+  margin: 0 0 1.1rem;
   line-height: 1.75;
 }
 
 .about-copy p:first-of-type {
-  padding-bottom: 1.5rem;
-  margin-bottom: 1.6rem;
+  padding-bottom: 1.25rem;
+  margin-bottom: 1.4rem;
   border-bottom: 1px solid var(--border);
 }
 
@@ -258,15 +258,15 @@ h3 {
 
 /* Bullets: improve scanability with consistent spacing */
 .about-list {
-  margin: 0;
-  padding-left: 1.25rem;
+  margin: 0 0 1.1rem;
+  padding-left: 1rem;
   color: var(--muted);
-  line-height: 1.65;
+  line-height: 1.6;
   list-style-position: outside;
 }
 
 .about-list li + li {
-  margin-top: 0.75rem;
+  margin-top: 0.5rem;
 }
 
 .about-text p {
