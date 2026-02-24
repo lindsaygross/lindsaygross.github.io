@@ -273,13 +273,19 @@ h3 {
   margin-top: 0;
 }
 
+.about-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  align-self: start;
+}
+
 .about-timeline {
   background: var(--card-bg);
   border: 1px solid var(--border);
   border-radius: 1rem;
   padding: 1.75rem;
   align-self: start;
-  margin-left: auto;
 }
 
 .about-timeline ul {
@@ -298,7 +304,7 @@ h3 {
     padding-right: 0;
   }
 
-  .about-timeline {
+  .about-sidebar {
     margin-top: 2rem;
   }
 }
@@ -315,6 +321,88 @@ h3 {
 .timeline-detail {
   display: block;
   color: var(--muted);
+}
+
+/* Skills tag cloud */
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.skill-tag {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 500;
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  background: rgba(53, 87, 255, 0.08);
+  color: var(--accent);
+  letter-spacing: 0.01em;
+}
+
+body[data-theme="dark"] .skill-tag {
+  background: rgba(53, 87, 255, 0.15);
+}
+
+/* Experience section */
+.experience-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.experience-item {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 2rem;
+  padding: 2rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.experience-item:first-child {
+  padding-top: 0;
+}
+
+.experience-item:last-child {
+  border-bottom: none;
+}
+
+.experience-date {
+  font-weight: 600;
+  font-size: 0.88rem;
+  color: var(--muted);
+  padding-top: 0.15rem;
+}
+
+.experience-body h3 {
+  margin: 0 0 0.25rem;
+  font-size: 1.1rem;
+}
+
+.experience-org {
+  color: var(--accent);
+  font-weight: 500;
+  font-size: 0.92rem;
+  margin: 0 0 0.75rem;
+}
+
+.experience-body ul {
+  margin: 0;
+  padding-left: 1.1rem;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.experience-body li + li {
+  margin-top: 0.4rem;
+}
+
+@media (max-width: 768px) {
+  .experience-item {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
 }
 
 .card-grid {
@@ -537,6 +625,7 @@ a:focus-visible {
 }
 
 /* Section-specific breathing room */
+#experience.section,
 #projects.section,
 #writing.section {
   padding-top: 5.5rem;
