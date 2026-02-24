@@ -3,9 +3,8 @@
 
 :root {
   color-scheme: light;
-  font-family: var(--font-body);
-  --font-body: "Inter";
-  --font-display: "Inter";
+  --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-display: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --bg: #fcfcf8;
   --text: #05050a;
   --muted: #40404d;
@@ -22,7 +21,8 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--text);
-  line-height: 1.7; /* Readability: slightly taller lines for body text */
+  font-size: 0.9375rem; /* 15px – tighter than browser default for a polished feel */
+  line-height: 1.7;
   font-family: var(--font-body);
   letter-spacing: 0.01em;
   -webkit-font-smoothing: antialiased;
@@ -285,7 +285,6 @@ h3 {
   border: 1px solid var(--border);
   border-radius: 1rem;
   padding: 1.75rem;
-  align-self: start;
 }
 
 .about-timeline ul {
@@ -331,11 +330,27 @@ h3 {
   line-height: 1.5;
 }
 
-/* Skills tag cloud */
+/* Skills */
+.skills-group + .skills-group {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+
+.skills-label {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+  margin-bottom: 0.5rem;
+}
+
 .skill-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: 0.45rem;
 }
 
 .skill-tag {
@@ -357,7 +372,6 @@ body[data-theme="dark"] .skill-tag {
 .experience-grid {
   display: flex;
   flex-direction: column;
-  gap: 0;
 }
 
 .experience-item {
@@ -415,8 +429,14 @@ body[data-theme="dark"] .skill-tag {
 
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
+}
+
+@media (max-width: 640px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .card {
@@ -466,8 +486,12 @@ body[data-theme="dark"] .skill-tag {
   font-weight: 500;
 }
 
+.writing-grid {
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
+
 .writing-card {
-  min-height: 220px;
+  min-height: 200px;
 }
 
 .text-link {
@@ -477,23 +501,13 @@ body[data-theme="dark"] .skill-tag {
   transition: color 0.2s ease;
 }
 
+.card > .text-link {
+  margin-top: auto;
+}
+
 .text-link:hover,
 .text-link:focus-visible {
   color: #0f1ad1;
-}
-
-.speaking-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: grid;
-  gap: 0.75rem;
-}
-
-.speaking-list li {
-  border-left: 3px solid var(--accent);
-  padding-left: 1rem;
-  color: var(--muted);
 }
 
 .contact-links {
