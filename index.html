@@ -120,11 +120,6 @@
       .fade-in{opacity:0;transform:translateY(20px);transition:opacity 0.4s ease,transform 0.4s ease}
       .fade-in.visible{opacity:1;transform:translateY(0)}
 
-      /* Scroll snap */
-      @media(min-width:769px){
-        html{scroll-snap-type:y proximity}
-        .snap-section{scroll-snap-align:start}
-      }
 
       /* Responsive */
       @media(max-width:820px){.about-grid{grid-template-columns:1fr}}
@@ -177,7 +172,7 @@
     </header>
 
     <main>
-      <section id="home" class="hero snap-section">
+      <section id="home" class="hero">
         <div class="container hero-grid">
           <div class="fade-in">
             <h1>Building AI that is safe, useful, and engineered for impact.</h1>
@@ -193,7 +188,7 @@
         </div>
       </section>
 
-      <section id="about" class="section section-alt snap-section">
+      <section id="about" class="section section-alt">
         <div class="container">
           <div class="section-heading fade-in">
             <p class="eyebrow">About</p>
@@ -221,7 +216,7 @@
         </div>
       </section>
 
-      <section id="experience" class="section snap-section">
+      <section id="experience" class="section">
         <div class="container">
           <div class="section-heading fade-in">
             <p class="eyebrow">Experience</p>
@@ -282,7 +277,7 @@
         </div>
       </section>
 
-      <section id="projects" class="section section-alt snap-section">
+      <section id="projects" class="section section-alt">
         <div class="container">
           <div class="section-heading fade-in">
             <p class="eyebrow">Projects</p>
@@ -362,7 +357,7 @@
         </div>
       </section>
 
-      <section id="writing" class="section snap-section">
+      <section id="writing" class="section">
         <div class="container">
           <div class="section-heading fade-in">
             <p class="eyebrow">Writing</p>
@@ -400,7 +395,7 @@
         </div>
       </section>
 
-      <section id="contact" class="section section-alt snap-section">
+      <section id="contact" class="section section-alt">
         <div class="container">
           <div class="section-heading fade-in">
             <p class="eyebrow">Contact</p>
