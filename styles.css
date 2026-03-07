@@ -1,11 +1,9 @@
-/* Typography: load Inter web font with needed weights */
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");
+/* Inter font loaded via <link> in HTML head */
 
 :root {
   color-scheme: light;
-  font-family: var(--font-body);
-  --font-body: "Inter";
-  --font-display: "Inter";
+  --font-body: "Inter", system-ui, -apple-system, sans-serif;
+  --font-display: "Inter", system-ui, -apple-system, sans-serif;
   --bg: #fcfcf8;
   --text: #05050a;
   --muted: #40404d;
@@ -22,11 +20,10 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--text);
-  line-height: 1.7; /* Readability: slightly taller lines for body text */
+  line-height: 1.7;
   font-family: var(--font-body);
   letter-spacing: 0.01em;
   -webkit-font-smoothing: antialiased;
-  font-feature-settings: "salt" 1;
 }
 
 img {
@@ -44,6 +41,8 @@ a {
   width: min(1200px, 90%);
   margin: 0 auto;
 }
+
+/* ── Header ── */
 
 .site-header {
   position: sticky;
@@ -128,6 +127,8 @@ a {
   font-size: 1.5rem;
 }
 
+/* ── Hero ── */
+
 .hero {
   padding: 5rem 0 3rem;
 }
@@ -209,6 +210,8 @@ h3 {
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
 }
 
+/* ── Sections ── */
+
 .section {
   padding: 4.5rem 0;
 }
@@ -224,7 +227,8 @@ h3 {
   margin-bottom: 2.5rem;
 }
 
-/* Layout: loosen about section grid spacing for more breathing room */
+/* ── About ── */
+
 .about-content {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -232,7 +236,6 @@ h3 {
   align-items: start;
 }
 
-/* Readability: limit measure to ~62ch for balanced measure */
 .reading-width {
   max-width: 62ch;
 }
@@ -256,7 +259,6 @@ h3 {
   padding-right: clamp(0.5rem, 2vw, 2rem);
 }
 
-/* Bullets: improve scanability with consistent spacing */
 .about-list {
   margin: 0 0 1.1rem;
   padding-left: 1rem;
@@ -288,21 +290,6 @@ h3 {
   margin: 0;
 }
 
-@media (max-width: 820px) {
-  /* Stack about layout on small screens so spacing improvements hold up */
-  .about-content {
-    grid-template-columns: 1fr;
-  }
-
-  .about-text {
-    padding-right: 0;
-  }
-
-  .about-timeline {
-    margin-top: 2rem;
-  }
-}
-
 .about-timeline li + li {
   margin-top: 1rem;
 }
@@ -316,6 +303,8 @@ h3 {
   display: block;
   color: var(--muted);
 }
+
+/* ── Cards (shared) ── */
 
 .card-grid {
   display: grid;
@@ -370,9 +359,61 @@ h3 {
   font-weight: 500;
 }
 
+/* ── Project cards with thumbnails ── */
+
+.project-grid {
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.75rem;
+}
+
+.project-card {
+  padding: 0;
+  overflow: hidden;
+}
+
+.card-thumb {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1.25rem 1.25rem 0 0;
+}
+
+.card-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 1.5rem 1.75rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.card-body p {
+  margin: 0;
+}
+
+.card-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: auto;
+  padding-top: 0.75rem;
+}
+
+/* ── Writing cards ── */
+
 .writing-card {
   min-height: 220px;
 }
+
+/* ── Links ── */
 
 .text-link {
   color: var(--accent);
@@ -381,14 +422,16 @@ h3 {
   transition: color 0.2s ease;
 }
 
-.card .text-link + .text-link {
-  margin-left: 1rem;
-}
-
 .text-link:hover,
 .text-link:focus-visible {
   color: #0f1ad1;
 }
+
+.card .text-link + .text-link {
+  margin-left: 1rem;
+}
+
+/* ── Speaking ── */
 
 .speaking-list {
   list-style: none;
@@ -403,6 +446,8 @@ h3 {
   padding-left: 1rem;
   color: var(--muted);
 }
+
+/* ── Contact ── */
 
 .contact-links {
   display: flex;
@@ -434,6 +479,8 @@ h3 {
 .contact-links a:focus-visible::after {
   transform: scaleX(1);
 }
+
+/* ── Footer ── */
 
 .site-footer {
   border-top: 1px solid var(--border);
@@ -488,6 +535,36 @@ h3 {
   border: 0;
 }
 
+/* ── Focus ── */
+
+a:focus-visible {
+  box-shadow: 0 0 0 2px rgba(53, 87, 255, 0.4);
+  border-radius: 4px;
+}
+
+/* ── Section breathing room ── */
+
+#projects.section,
+#writing.section {
+  padding-top: 5.5rem;
+}
+
+/* ── Responsive ── */
+
+@media (max-width: 820px) {
+  .about-content {
+    grid-template-columns: 1fr;
+  }
+
+  .about-text {
+    padding-right: 0;
+  }
+
+  .about-timeline {
+    margin-top: 2rem;
+  }
+}
+
 @media (max-width: 768px) {
   .site-nav ul {
     position: absolute;
@@ -530,23 +607,17 @@ h3 {
     height: 220px;
   }
 
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
   .site-footer .container {
     flex-direction: column;
   }
 }
 
-a:focus-visible {
-  box-shadow: 0 0 0 2px rgba(53, 87, 255, 0.4);
-  border-radius: 4px;
-}
+/* ── Dark theme ── */
 
-/* Section-specific breathing room */
-#projects.section,
-#writing.section {
-  padding-top: 5.5rem;
-}
-
-/* Manual dark theme overrides */
 body[data-theme="dark"] {
   --bg: #050506;
   --text: #f7f7f0;
