@@ -431,6 +431,33 @@ h3 {
   margin-left: 1rem;
 }
 
+/* ── Skills ── */
+
+.skills-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.skill-chip {
+  display: inline-block;
+  padding: 0.4rem 0.9rem;
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--muted);
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, color 0.2s ease;
+}
+
+.skill-chip:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 0 3px rgba(53, 87, 255, 0.15);
+  color: var(--text);
+}
+
 /* ── Speaking ── */
 
 .speaking-list {
