@@ -68,16 +68,10 @@
       .tagline{color:var(--muted);font-weight:500}
       .project-grid{grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:1.75rem}
       .project-card{position:relative;overflow:hidden}
-      .project-card .card-overlay{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;transition:opacity 0.35s ease;border-radius:1.25rem;z-index:1}
-      .project-card .card-overlay::after{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,0.1) 0%,rgba(0,0,0,0.65) 100%);border-radius:1.25rem}
+      .project-card .card-overlay{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;transition:opacity 0.35s ease;border-radius:1.25rem;z-index:3}
       .project-card:hover .card-overlay{opacity:1}
-      .project-card .card-body{position:relative;z-index:2;display:flex;flex-direction:column;gap:0.5rem;flex:1}
+      .project-card .card-body{position:relative;z-index:1;display:flex;flex-direction:column;gap:0.5rem;flex:1}
       .project-card:hover{transform:translateY(-4px)}
-      .project-card:hover .card-body{color:#fff}
-      .project-card:hover .card-tag{color:#93b4ff}
-      .project-card:hover .tagline{color:rgba(255,255,255,0.8)}
-      .project-card:hover h3{color:#fff}
-      .project-card:hover .text-link{color:#93b4ff}
       .card-body p{margin:0}
       .card-links{display:flex;flex-wrap:wrap;gap:1rem;margin-top:auto;padding-top:0.75rem}
       .writing-card{min-height:220px}
