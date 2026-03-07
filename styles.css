@@ -381,6 +381,10 @@ h3 {
   transition: color 0.2s ease;
 }
 
+.card .text-link + .text-link {
+  margin-left: 1rem;
+}
+
 .text-link:hover,
 .text-link:focus-visible {
   color: #0f1ad1;
