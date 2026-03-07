@@ -94,6 +94,11 @@
       .writing-card{min-height:200px}
       .substack-link{margin-top:2rem;display:inline-block}
 
+      /* Skills */
+      .skills-cloud{display:flex;flex-wrap:wrap;gap:0.6rem}
+      .skill-chip{display:inline-block;padding:0.4rem 0.9rem;font-size:0.82rem;font-weight:500;letter-spacing:0.02em;color:var(--muted);background:var(--card-bg);border:1px solid var(--border);border-radius:999px;transition:transform 0.2s ease,box-shadow 0.2s ease,color 0.2s ease}
+      .skill-chip:hover{transform:translateY(-2px);box-shadow:0 0 0 3px rgba(53,87,255,0.15);color:var(--text)}
+
       /* Text links */
       .text-link{color:var(--accent);font-weight:600;letter-spacing:0.05em;transition:color 0.2s ease}
       .text-link:hover,.text-link:focus-visible{color:#0f1ad1}
@@ -135,7 +140,7 @@
       }
 
       /* Dark theme */
-      body[data-theme="dark"]{--bg:#050506;--text:#f7f7f0;--muted:#b8b8c7;--card-bg:#0f0f12;--border:rgba(255,255,255,0.08);--section-alt:#0a0a0e}
+      body[data-theme="dark"]{--bg:#050506;--text:#f7f7f0;--muted:#b8b8c7;--card-bg:#0f0f12;--border:rgba(255,255,255,0.08);--section-alt:#111116}
       body[data-theme="dark"] .site-header{background:rgba(5,5,6,0.85)}
       body[data-theme="dark"] .mode-toggle{background:rgba(20,20,25,0.85);border-color:rgba(255,255,255,0.12);color:var(--text)}
       body[data-theme="dark"] .card{box-shadow:0 20px 40px rgba(0,0,0,0.4)}
@@ -155,13 +160,12 @@
             &#9776;
           </button>
           <ul id="nav-menu">
-            <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#writing">Writing</a></li>
+            <li><a href="#skills">Skills</a></li>
             <li><a href="#experience">Experience</a></li>
             <li><a href="#contact">Contact</a></li>
-            <li><a href="assets/LINDSAY GROSS.pdf" target="_blank" rel="noopener noreferrer">Resume</a></li>
           </ul>
         </nav>
         <button class="mode-toggle" type="button" aria-pressed="false">
@@ -359,7 +363,49 @@
         </div>
       </section>
 
-      <section id="experience" class="section">
+      <section id="skills" class="section">
+        <div class="container">
+          <div class="section-heading fade-in">
+            <p class="eyebrow">Skills</p>
+            <h2>Skills &amp; Tools</h2>
+          </div>
+          <div class="skills-cloud fade-in">
+            <span class="skill-chip">Python</span>
+            <span class="skill-chip">JavaScript</span>
+            <span class="skill-chip">Node.js</span>
+            <span class="skill-chip">R</span>
+            <span class="skill-chip">SQL</span>
+            <span class="skill-chip">HTML/CSS</span>
+            <span class="skill-chip">PyTorch</span>
+            <span class="skill-chip">TensorFlow</span>
+            <span class="skill-chip">spaCy</span>
+            <span class="skill-chip">Legal-BERT</span>
+            <span class="skill-chip">Hugging Face</span>
+            <span class="skill-chip">GradCAM</span>
+            <span class="skill-chip">OpenAI API</span>
+            <span class="skill-chip">Embeddings</span>
+            <span class="skill-chip">Git</span>
+            <span class="skill-chip">Docker</span>
+            <span class="skill-chip">GCP</span>
+            <span class="skill-chip">AWS</span>
+            <span class="skill-chip">Streamlit</span>
+            <span class="skill-chip">FastAPI</span>
+            <span class="skill-chip">MLflow</span>
+            <span class="skill-chip">Jira</span>
+            <span class="skill-chip">Confluence</span>
+            <span class="skill-chip">GeoPandas</span>
+            <span class="skill-chip">Pandas</span>
+            <span class="skill-chip">NumPy</span>
+            <span class="skill-chip">Altair</span>
+            <span class="skill-chip">Leaflet.js</span>
+            <span class="skill-chip">Lean Canvas</span>
+            <span class="skill-chip">Figma</span>
+            <span class="skill-chip">Vite</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="experience" class="section section-alt">
         <div class="container">
           <div class="section-heading fade-in">
             <p class="eyebrow">Experience</p>
@@ -420,7 +466,7 @@
         </div>
       </section>
 
-      <section id="contact" class="section section-alt">
+      <section id="contact" class="section">
         <div class="container">
           <div class="section-heading fade-in">
             <p class="eyebrow">Contact</p>
