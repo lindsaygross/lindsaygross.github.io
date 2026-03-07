@@ -67,11 +67,12 @@
       .card-tag{font-size:0.75rem;text-transform:uppercase;letter-spacing:0.15em;color:var(--accent)}
       .tagline{color:var(--muted);font-weight:500}
       .project-grid{grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:1.75rem}
-      .project-card{position:relative;overflow:hidden}
-      .project-card .card-overlay{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;transition:opacity 0.35s ease;border-radius:1.25rem;z-index:3}
-      .project-card:hover .card-overlay{opacity:1}
-      .project-card .card-body{position:relative;z-index:1;display:flex;flex-direction:column;gap:0.5rem;flex:1}
+      .project-card{padding:0;overflow:hidden}
       .project-card:hover{transform:translateY(-4px)}
+      .card-thumb{position:relative;width:100%;height:180px;overflow:hidden}
+      .card-thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 0.35s ease;z-index:1}
+      .card-thumb:hover img{opacity:1}
+      .project-card .card-body{padding:1.5rem 1.75rem 1.75rem;display:flex;flex-direction:column;gap:0.5rem;flex:1}
       .card-body p{margin:0}
       .card-links{display:flex;flex-wrap:wrap;gap:1rem;margin-top:auto;padding-top:0.75rem}
       .writing-card{min-height:220px}
@@ -189,7 +190,7 @@
           <div class="card-grid project-grid">
 
             <article class="card project-card">
-              <div class="card-overlay" style="background-image:url('assets/thumb-safet.png')"></div>
+              <div class="card-thumb" style="background:linear-gradient(135deg,#0f2b3c,#1a6b5a)"><img src="assets/thumb-safet.png" alt="SAFE-T equity audit dashboard" /></div>
               <div class="card-body">
                 <div class="card-tag">Python + GeoPandas + Vite + Leaflet.js</div>
                 <h3>SAFE-T</h3>
@@ -203,7 +204,7 @@
             </article>
 
             <article class="card project-card">
-              <div class="card-overlay" style="background-image:url('assets/thumb-impunity.png')"></div>
+              <div class="card-thumb" style="background:linear-gradient(135deg,#0a0a1a,#1a1a3e)"><img src="assets/thumb-impunity.png" alt="The Impunity Index" /></div>
               <div class="card-body">
                 <div class="card-tag">NLP + Machine Learning</div>
                 <h3>The Impunity Index</h3>
@@ -216,7 +217,7 @@
             </article>
 
             <article class="card project-card">
-              <div class="card-overlay" style="background-image:url('assets/thumb-alba.png')"></div>
+              <div class="card-thumb" style="background:linear-gradient(135deg,#d4e8d0,#e8efe6)"><img src="assets/thumb-alba.png" alt="Alba carbon footprint tracker" /></div>
               <div class="card-body">
                 <div class="card-tag">Chrome Extension</div>
                 <h3>Alba</h3>
@@ -230,7 +231,7 @@
             </article>
 
             <article class="card project-card">
-              <div class="card-overlay" style="background-image:url('assets/thumb-uav.png')"></div>
+              <div class="card-thumb" style="background:linear-gradient(135deg,#060d14,#0c1e2e)"><img src="assets/thumb-uav.png" alt="UAV thermal imaging detection" /></div>
               <div class="card-body">
                 <div class="card-tag">Computer Vision + Deep Learning</div>
                 <h3>UAV Human Detection</h3>
@@ -244,7 +245,7 @@
             </article>
 
             <article class="card project-card">
-              <div class="card-overlay" style="background-image:url('assets/thumb-aiaudit.png')"></div>
+              <div class="card-thumb" style="background:linear-gradient(135deg,#d4f0f0,#e0f2e0)"><img src="assets/thumb-aiaudit.png" alt="AI Audit compliance system" /></div>
               <div class="card-body">
                 <div class="card-tag">FastAPI + Streamlit + MLflow</div>
                 <h3>AI Audit</h3>
