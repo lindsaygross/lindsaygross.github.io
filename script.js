@@ -82,3 +82,17 @@ prefersDarkScheme.addEventListener('change', (event) => {
   if (localStorage.getItem('theme')) return;
   applyTheme(event.matches ? 'dark' : 'light');
 });
+
+// Fade-in on scroll
+const fadeEls = document.querySelectorAll('.fade-in');
+if (fadeEls.length) {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  fadeEls.forEach((el) => observer.observe(el));
+}
