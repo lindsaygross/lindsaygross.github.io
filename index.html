@@ -67,9 +67,17 @@
       .card-tag{font-size:0.75rem;text-transform:uppercase;letter-spacing:0.15em;color:var(--accent)}
       .tagline{color:var(--muted);font-weight:500}
       .project-grid{grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:1.75rem}
-      .project-card{padding:0;overflow:hidden}
-      .card-thumb{width:100%;height:180px;overflow:hidden;display:flex;align-items:center;justify-content:center}
-      .card-body{padding:1.5rem 1.75rem 1.75rem;display:flex;flex-direction:column;gap:0.5rem;flex:1}
+      .project-card{position:relative;overflow:hidden}
+      .project-card .card-overlay{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;transition:opacity 0.35s ease;border-radius:1.25rem;z-index:1}
+      .project-card .card-overlay::after{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,0.1) 0%,rgba(0,0,0,0.65) 100%);border-radius:1.25rem}
+      .project-card:hover .card-overlay{opacity:1}
+      .project-card .card-body{position:relative;z-index:2;display:flex;flex-direction:column;gap:0.5rem;flex:1}
+      .project-card:hover{transform:translateY(-4px)}
+      .project-card:hover .card-body{color:#fff}
+      .project-card:hover .card-tag{color:#93b4ff}
+      .project-card:hover .tagline{color:rgba(255,255,255,0.8)}
+      .project-card:hover h3{color:#fff}
+      .project-card:hover .text-link{color:#93b4ff}
       .card-body p{margin:0}
       .card-links{display:flex;flex-wrap:wrap;gap:1rem;margin-top:auto;padding-top:0.75rem}
       .writing-card{min-height:220px}
@@ -187,7 +195,7 @@
           <div class="card-grid project-grid">
 
             <article class="card project-card">
-              <div class="card-thumb" style="background:linear-gradient(135deg,#0f2b3c,#1a6b5a)"><img src="assets/thumb-safet.png" alt="SAFE-T equity audit dashboard" /></div>
+              <div class="card-overlay" style="background-image:url('assets/thumb-safet.png')"></div>
               <div class="card-body">
                 <div class="card-tag">Python + GeoPandas + Vite + Leaflet.js</div>
                 <h3>SAFE-T</h3>
@@ -201,7 +209,7 @@
             </article>
 
             <article class="card project-card">
-              <div class="card-thumb" style="background:linear-gradient(135deg,#0a0a1a,#1a1a3e)"><img src="assets/thumb-impunity.png" alt="The Impunity Index" /></div>
+              <div class="card-overlay" style="background-image:url('assets/thumb-impunity.png')"></div>
               <div class="card-body">
                 <div class="card-tag">NLP + Machine Learning</div>
                 <h3>The Impunity Index</h3>
@@ -214,7 +222,7 @@
             </article>
 
             <article class="card project-card">
-              <div class="card-thumb" style="background:linear-gradient(135deg,#d4e8d0,#e8efe6)"><img src="assets/thumb-alba.png" alt="Alba carbon footprint tracker" /></div>
+              <div class="card-overlay" style="background-image:url('assets/thumb-alba.png')"></div>
               <div class="card-body">
                 <div class="card-tag">Chrome Extension</div>
                 <h3>Alba</h3>
@@ -228,7 +236,7 @@
             </article>
 
             <article class="card project-card">
-              <div class="card-thumb" style="background:linear-gradient(135deg,#060d14,#0c1e2e)"><img src="assets/thumb-uav.png" alt="UAV thermal imaging detection" /></div>
+              <div class="card-overlay" style="background-image:url('assets/thumb-uav.png')"></div>
               <div class="card-body">
                 <div class="card-tag">Computer Vision + Deep Learning</div>
                 <h3>UAV Human Detection</h3>
@@ -242,7 +250,7 @@
             </article>
 
             <article class="card project-card">
-              <div class="card-thumb" style="background:linear-gradient(135deg,#d4f0f0,#e0f2e0)"><img src="assets/thumb-aiaudit.png" alt="AI Audit compliance system" /></div>
+              <div class="card-overlay" style="background-image:url('assets/thumb-aiaudit.png')"></div>
               <div class="card-body">
                 <div class="card-tag">FastAPI + Streamlit + MLflow</div>
                 <h3>AI Audit</h3>
