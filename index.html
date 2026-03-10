@@ -100,7 +100,9 @@
       .skills-cloud{display:flex;flex-wrap:wrap;gap:0.6rem}
       .skill-chip{display:inline-block;padding:0.4rem 0.9rem;font-size:0.82rem;font-weight:500;letter-spacing:0.02em;color:var(--muted);background:var(--card-bg);border:1px solid var(--border);border-radius:999px;transition:transform 0.2s ease,box-shadow 0.2s ease,color 0.2s ease}
       .skill-chip:hover{transform:translateY(-2px);box-shadow:0 0 0 3px rgba(53,87,255,0.15);color:var(--text)}
+      .skill-chip--safety:hover{box-shadow:0 0 0 3px rgba(16,185,129,0.15)}
       .skill-chip--ai{border-color:rgba(53,87,255,0.25);background:rgba(53,87,255,0.04)}
+      .skill-chip--safety{border-color:rgba(16,185,129,0.3);background:rgba(16,185,129,0.04)}
 
       /* Text links */
       .text-link{color:var(--accent);font-weight:600;letter-spacing:0.05em;transition:color 0.2s ease}
@@ -152,6 +154,7 @@
       body[data-theme="dark"] .edu-card:hover{box-shadow:0 25px 55px rgba(0,0,0,0.55)}
       body[data-theme="dark"] .text-link:hover,body[data-theme="dark"] .text-link:focus-visible{color:#8da1ff}
       body[data-theme="dark"] .skill-chip--ai{border-color:rgba(53,87,255,0.35);background:rgba(53,87,255,0.08)}
+      body[data-theme="dark"] .skill-chip--safety{border-color:rgba(16,185,129,0.4);background:rgba(16,185,129,0.08)}
     </style>
   </head>
   <body>
@@ -391,14 +394,26 @@
               <div class="skills-cloud">
                 <span class="skill-chip skill-chip--ai">PyTorch</span>
                 <span class="skill-chip skill-chip--ai">TensorFlow</span>
+                <span class="skill-chip skill-chip--ai">Hugging Face</span>
                 <span class="skill-chip skill-chip--ai">spaCy</span>
                 <span class="skill-chip skill-chip--ai">Legal-BERT</span>
-                <span class="skill-chip skill-chip--ai">Hugging Face</span>
-                <span class="skill-chip skill-chip--ai">GradCAM</span>
                 <span class="skill-chip skill-chip--ai">Embeddings</span>
+                <span class="skill-chip skill-chip--ai">Time Series</span>
+                <span class="skill-chip skill-chip--ai">Benchmarking</span>
+                <span class="skill-chip skill-chip--ai">Error Analysis</span>
+              </div>
+            </div>
+            <div class="skill-category">
+              <p class="skill-category-label">LLM Systems</p>
+              <div class="skills-cloud">
                 <span class="skill-chip skill-chip--ai">LLM APIs (OpenAI, Anthropic)</span>
                 <span class="skill-chip skill-chip--ai">Prompt Engineering</span>
                 <span class="skill-chip skill-chip--ai">RAG</span>
+                <span class="skill-chip skill-chip--ai">Semantic Search</span>
+                <span class="skill-chip skill-chip--ai">Vector Databases</span>
+                <span class="skill-chip skill-chip--ai">Agentic Systems</span>
+                <span class="skill-chip skill-chip--ai">Tool Use / Function Calling</span>
+                <span class="skill-chip skill-chip--ai">Guardrails</span>
               </div>
             </div>
             <div class="skill-category">
@@ -406,18 +421,36 @@
               <div class="skills-cloud">
                 <span class="skill-chip">Pandas</span>
                 <span class="skill-chip">NumPy</span>
-                <span class="skill-chip">GeoPandas</span>
                 <span class="skill-chip">Docker</span>
                 <span class="skill-chip">GCP</span>
                 <span class="skill-chip">AWS</span>
                 <span class="skill-chip">Git</span>
                 <span class="skill-chip">MLflow</span>
-                <span class="skill-chip">Gradio</span>
+                <span class="skill-chip">ML Pipelines</span>
+                <span class="skill-chip">Model Deployment</span>
+                <span class="skill-chip">Model Monitoring</span>
+                <span class="skill-chip">Synthetic Data</span>
+              </div>
+            </div>
+            <div class="skill-category">
+              <p class="skill-category-label">Responsible AI &amp; Safety</p>
+              <div class="skills-cloud">
+                <span class="skill-chip skill-chip--safety">AI Safety</span>
+                <span class="skill-chip skill-chip--safety">AI Governance</span>
+                <span class="skill-chip skill-chip--safety">Trust &amp; Safety Systems</span>
+                <span class="skill-chip skill-chip--safety">Algorithmic Auditing</span>
+                <span class="skill-chip skill-chip--safety">Risk Assessment</span>
+                <span class="skill-chip skill-chip--safety">Model Evaluation</span>
+                <span class="skill-chip skill-chip--safety">Calibration</span>
+                <span class="skill-chip skill-chip--safety">Explainable AI (XAI)</span>
+                <span class="skill-chip skill-chip--safety">SHAP / LIME</span>
               </div>
             </div>
             <div class="skill-category">
               <p class="skill-category-label">Product &amp; Design</p>
               <div class="skills-cloud">
+                <span class="skill-chip">Experiment Design</span>
+                <span class="skill-chip">A/B Testing</span>
                 <span class="skill-chip">Jira</span>
                 <span class="skill-chip">Confluence</span>
                 <span class="skill-chip">Lean Canvas</span>
