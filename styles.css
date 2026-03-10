@@ -433,6 +433,22 @@ h3 {
 
 /* ── Skills ── */
 
+.skills-grouped {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+
+.skill-category-label {
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  font-size: 0.7rem;
+  color: var(--muted);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  opacity: 0.7;
+}
+
 .skills-cloud {
   display: flex;
   flex-wrap: wrap;
@@ -456,6 +472,11 @@ h3 {
   transform: translateY(-2px);
   box-shadow: 0 0 0 3px rgba(53, 87, 255, 0.15);
   color: var(--text);
+}
+
+.skill-chip--ai {
+  border-color: rgba(53, 87, 255, 0.25);
+  background: rgba(53, 87, 255, 0.04);
 }
 
 /* ── Speaking ── */
@@ -674,4 +695,9 @@ body[data-theme="dark"] .card:hover {
 body[data-theme="dark"] .text-link:hover,
 body[data-theme="dark"] .text-link:focus-visible {
   color: #8da1ff;
+}
+
+body[data-theme="dark"] .skill-chip--ai {
+  border-color: rgba(53, 87, 255, 0.35);
+  background: rgba(53, 87, 255, 0.08);
 }

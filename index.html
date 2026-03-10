@@ -95,9 +95,12 @@
       .substack-link{margin-top:2rem;display:inline-block}
 
       /* Skills */
+      .skills-grouped{display:flex;flex-direction:column;gap:1.8rem}
+      .skill-category-label{text-transform:uppercase;letter-spacing:0.22em;font-size:0.7rem;color:var(--muted);font-weight:600;margin-bottom:0.5rem;opacity:0.7}
       .skills-cloud{display:flex;flex-wrap:wrap;gap:0.6rem}
       .skill-chip{display:inline-block;padding:0.4rem 0.9rem;font-size:0.82rem;font-weight:500;letter-spacing:0.02em;color:var(--muted);background:var(--card-bg);border:1px solid var(--border);border-radius:999px;transition:transform 0.2s ease,box-shadow 0.2s ease,color 0.2s ease}
       .skill-chip:hover{transform:translateY(-2px);box-shadow:0 0 0 3px rgba(53,87,255,0.15);color:var(--text)}
+      .skill-chip--ai{border-color:rgba(53,87,255,0.25);background:rgba(53,87,255,0.04)}
 
       /* Text links */
       .text-link{color:var(--accent);font-weight:600;letter-spacing:0.05em;transition:color 0.2s ease}
@@ -148,6 +151,7 @@
       body[data-theme="dark"] .edu-card{box-shadow:0 20px 40px rgba(0,0,0,0.4)}
       body[data-theme="dark"] .edu-card:hover{box-shadow:0 25px 55px rgba(0,0,0,0.55)}
       body[data-theme="dark"] .text-link:hover,body[data-theme="dark"] .text-link:focus-visible{color:#8da1ff}
+      body[data-theme="dark"] .skill-chip--ai{border-color:rgba(53,87,255,0.35);background:rgba(53,87,255,0.08)}
     </style>
   </head>
   <body>
@@ -200,20 +204,18 @@
           <div class="about-grid">
             <div class="about-bio fade-in">
               <p>I'm a Master of Engineering student in AI at Duke with a background in public policy, trust and safety, and machine learning. I started on the policy side, studying how technology shapes society and where guardrails fail. But as AI began moving faster than regulation, I realized real impact happens inside the product cycle. So I learned to build.</p>
-              <p>Now I work at the intersection of model behavior, governance, and human-centered design. I make tools that surface what algorithms are actually doing: who they prioritize, who they miss, and what the gap looks like. I co-founded Duke Tech for Change and serve on the board of All Tech Is Human.</p>
-              <p>I grew up in New Jersey, studied abroad in Barcelona, and speak Spanish. Some fun facts: I make a new Spotify playlist every month and I recently joined a club rugby team. No connection between the two.</p>
+              <p>Now I work at the intersection of model behavior, governance, and human-centered design. I make tools that surface what algorithms are actually doing: who they prioritize, who they miss, and what the gap looks like.</p>
             </div>
             <div class="edu-grid fade-in">
               <h3 style="margin:0 0 0.25rem">Education</h3>
               <article class="edu-card">
-                <h3>MEng, Artificial Intelligence</h3>
+                <h3>MEng, Artificial Intelligence for Product Innovation</h3>
                 <p class="edu-meta">Duke Pratt School of Engineering &middot; May 2026</p>
                 <p class="edu-meta">4+1 Duke Mission Merit Scholarship</p>
               </article>
               <article class="edu-card">
-                <h3>BA, Public Policy</h3>
+                <h3>BA, Public Policy &middot; Digital Intelligence Certificate &middot; Spanish Minor</h3>
                 <p class="edu-meta">Duke University &middot; Cum Laude &middot; May 2025</p>
-                <p class="edu-meta">Spanish Minor &middot; Digital Intelligence Certificate</p>
               </article>
             </div>
           </div>
@@ -369,38 +371,59 @@
             <p class="eyebrow">Skills</p>
             <h2>Skills &amp; Tools</h2>
           </div>
-          <div class="skills-cloud fade-in">
-            <span class="skill-chip">Python</span>
-            <span class="skill-chip">JavaScript</span>
-            <span class="skill-chip">Node.js</span>
-            <span class="skill-chip">R</span>
-            <span class="skill-chip">SQL</span>
-            <span class="skill-chip">HTML/CSS</span>
-            <span class="skill-chip">PyTorch</span>
-            <span class="skill-chip">TensorFlow</span>
-            <span class="skill-chip">spaCy</span>
-            <span class="skill-chip">Legal-BERT</span>
-            <span class="skill-chip">Hugging Face</span>
-            <span class="skill-chip">GradCAM</span>
-            <span class="skill-chip">OpenAI API</span>
-            <span class="skill-chip">Embeddings</span>
-            <span class="skill-chip">Git</span>
-            <span class="skill-chip">Docker</span>
-            <span class="skill-chip">GCP</span>
-            <span class="skill-chip">AWS</span>
-            <span class="skill-chip">Streamlit</span>
-            <span class="skill-chip">FastAPI</span>
-            <span class="skill-chip">MLflow</span>
-            <span class="skill-chip">Jira</span>
-            <span class="skill-chip">Confluence</span>
-            <span class="skill-chip">GeoPandas</span>
-            <span class="skill-chip">Pandas</span>
-            <span class="skill-chip">NumPy</span>
-            <span class="skill-chip">Altair</span>
-            <span class="skill-chip">Leaflet.js</span>
-            <span class="skill-chip">Lean Canvas</span>
-            <span class="skill-chip">Figma</span>
-            <span class="skill-chip">Vite</span>
+          <div class="skills-grouped fade-in">
+            <div class="skill-category">
+              <p class="skill-category-label">Languages &amp; Frameworks</p>
+              <div class="skills-cloud">
+                <span class="skill-chip">Python</span>
+                <span class="skill-chip">JavaScript</span>
+                <span class="skill-chip">R</span>
+                <span class="skill-chip">SQL</span>
+                <span class="skill-chip">HTML/CSS</span>
+                <span class="skill-chip">Node.js</span>
+                <span class="skill-chip">FastAPI</span>
+                <span class="skill-chip">Streamlit</span>
+                <span class="skill-chip">REST APIs</span>
+              </div>
+            </div>
+            <div class="skill-category">
+              <p class="skill-category-label">AI / ML</p>
+              <div class="skills-cloud">
+                <span class="skill-chip skill-chip--ai">PyTorch</span>
+                <span class="skill-chip skill-chip--ai">TensorFlow</span>
+                <span class="skill-chip skill-chip--ai">spaCy</span>
+                <span class="skill-chip skill-chip--ai">Legal-BERT</span>
+                <span class="skill-chip skill-chip--ai">Hugging Face</span>
+                <span class="skill-chip skill-chip--ai">GradCAM</span>
+                <span class="skill-chip skill-chip--ai">Embeddings</span>
+                <span class="skill-chip skill-chip--ai">LLM APIs (OpenAI, Anthropic)</span>
+                <span class="skill-chip skill-chip--ai">Prompt Engineering</span>
+                <span class="skill-chip skill-chip--ai">RAG</span>
+              </div>
+            </div>
+            <div class="skill-category">
+              <p class="skill-category-label">Data &amp; Infrastructure</p>
+              <div class="skills-cloud">
+                <span class="skill-chip">Pandas</span>
+                <span class="skill-chip">NumPy</span>
+                <span class="skill-chip">GeoPandas</span>
+                <span class="skill-chip">Docker</span>
+                <span class="skill-chip">GCP</span>
+                <span class="skill-chip">AWS</span>
+                <span class="skill-chip">Git</span>
+                <span class="skill-chip">MLflow</span>
+                <span class="skill-chip">Gradio</span>
+              </div>
+            </div>
+            <div class="skill-category">
+              <p class="skill-category-label">Product &amp; Design</p>
+              <div class="skills-cloud">
+                <span class="skill-chip">Jira</span>
+                <span class="skill-chip">Confluence</span>
+                <span class="skill-chip">Lean Canvas</span>
+                <span class="skill-chip">Figma</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
