@@ -42,7 +42,8 @@
       .btn.primary{background:var(--accent);color:#fff}
       .btn.secondary{border-color:var(--border);color:var(--text)}
       .btn:hover,.btn:focus-visible{transform:translateY(-2px);box-shadow:0 0 0 3px rgba(53,87,255,0.2)}
-      .hero-media img{width:280px;height:280px;border-radius:50%;object-fit:cover;margin-left:auto;margin-right:auto;border:6px solid rgba(53,87,255,0.15);box-shadow:0 8px 24px rgba(0,0,0,0.06)}
+      .hero-media{width:280px;height:280px;border-radius:50%;overflow:hidden;margin-left:auto;margin-right:auto;border:6px solid rgba(53,87,255,0.15);box-shadow:0 8px 24px rgba(0,0,0,0.06)}
+      .hero-media img{width:100%;height:100%;object-fit:cover;transform:scale(1.8);transform-origin:50% 58%}
 
       /* Sections */
       .section{padding:6rem 0}
@@ -138,7 +139,7 @@
         .nav-toggle{display:inline-flex}
         .about-grid{grid-template-columns:1fr}
         .hero{padding-top:4rem}
-        .hero-media img{width:220px;height:220px}
+        .hero-media{width:220px;height:220px}
         .project-grid{grid-template-columns:1fr}
         .exp-grid{grid-template-columns:1fr}
         .site-footer .container{flex-direction:column}
@@ -187,13 +188,13 @@
         <div class="container hero-grid">
           <div class="fade-in">
             <h1>Building AI that is safe, useful, and engineered for impact.</h1>
-            <p class="subheadline">AI engineer and product builder at Duke who works at the intersection of safety, governance, and user experience.</p>
+            <p class="subheadline">AI engineer and product builder working at the intersection of safety, governance, and user experience.</p>
             <div class="hero-ctas">
               <a class="btn primary" href="#projects">View selected projects</a>
             </div>
           </div>
           <div class="hero-media fade-in" aria-hidden="true">
-            <img src="assets/chapel%209%20copy.jpg" alt="Lindsay Gross headshot" />
+            <img src="assets/Headshot2026.jpeg" alt="Lindsay Gross headshot" />
           </div>
         </div>
       </section>
@@ -206,14 +207,14 @@
           </div>
           <div class="about-grid">
             <div class="about-bio fade-in">
-              <p>I'm a Master of Engineering student in AI at Duke with a background in public policy, trust and safety, and machine learning. I started on the policy side, studying how technology shapes society and where guardrails fail. But as AI began moving faster than regulation, I realized real impact happens inside the product cycle. So I learned to build.</p>
-              <p>Now I work at the intersection of model behavior, governance, and human-centered design. I make tools that surface what algorithms are actually doing: who they prioritize, who they miss, and what the gap looks like.</p>
+              <p>I'm an AI engineer with a background in public policy, trust and safety, and machine learning. I started on the policy side, studying how technology shapes society and where guardrails fail. But as AI began moving faster than regulation, I realized real impact happens inside the product cycle. So I learned to build.</p>
+              <p>Now I work at the intersection of model behavior, governance, and human-centered design. I make tools that surface what algorithms are actually doing: who they prioritize, who they miss, and what the gap looks like. I hold an MEng in AI and a BA in Public Policy from Duke, and I currently serve as Managing Editor at The AI Collective, where I write about AI for 225,000+ readers across 40+ countries.</p>
             </div>
             <div class="edu-grid fade-in">
               <h3 style="margin:0 0 0.25rem">Education</h3>
               <article class="edu-card">
                 <h3>MEng, Artificial Intelligence for Product Innovation</h3>
-                <p class="edu-meta">Duke Pratt School of Engineering &middot; May 2026</p>
+                <p class="edu-meta">Duke Pratt School of Engineering &middot; May 2026 &middot; GPA 3.87</p>
                 <p class="edu-meta">4+1 Duke Mission Merit Scholarship</p>
               </article>
               <article class="edu-card">
@@ -232,6 +233,20 @@
             <h2>Selected projects</h2>
           </div>
           <div class="card-grid project-grid fade-in">
+
+            <article class="card project-card">
+              <div class="card-thumb" style="background:linear-gradient(135deg,#2a2d4a,#46407a)"><img src="assets/lucid.jpeg" alt="LUCID short-form video manipulation analyzer" /></div>
+              <div class="card-body">
+                <div class="card-tag">DistilBERT + Claude API + Next.js + FastAPI</div>
+                <h3>LUCID</h3>
+                <p class="tagline">Short-Form Video Manipulation Analyzer</p>
+                <p>Full-stack app analyzing psychological manipulation in TikTok videos using a fine-tuned DistilBERT multi-label classifier, Claude API for LLM-as-judge labeling, and Whisper for transcription. Deployed via Next.js + FastAPI on Vercel/Railway with model hosted on HuggingFace Hub.</p>
+                <div class="card-links">
+                  <a class="text-link" href="https://lucid-seven-pied.vercel.app/" target="_blank" rel="noopener noreferrer">Live site &#8599;</a>
+                  <a class="text-link" href="https://github.com/lindsaygross/Lucid" target="_blank" rel="noopener noreferrer">GitHub &#8599;</a>
+                </div>
+              </div>
+            </article>
 
             <article class="card project-card">
               <div class="card-thumb" style="background:linear-gradient(135deg,#2d3a4a,#3d5a6e)"><img src="assets/thumb-safet.png" alt="SAFE-T equity audit dashboard" /></div>
@@ -535,7 +550,7 @@
             <a href="https://www.linkedin.com/in/lindsay-gross1/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
             <a href="https://github.com/lindsaygross" target="_blank" rel="noopener noreferrer">GitHub</a>
             <a href="https://substack.com/@lindsaygross1" target="_blank" rel="noopener noreferrer">Substack</a>
-            <a href="assets/LINDSAY GROSS.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+            <a href="assets/LINDSAY_GROSS_Website (1).pdf" target="_blank" rel="noopener noreferrer">Resume</a>
           </div>
         </div>
       </section>
