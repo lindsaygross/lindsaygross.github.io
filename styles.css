@@ -466,6 +466,24 @@ a.piece:hover h3 { text-decoration: underline; text-underline-offset: 0.2em; tex
 }
 .section:has(.story) { padding-block: var(--s-7) 0; }
 
+/* ---------- Phones ---------- */
+
+@media (max-width: 879px) {
+  /* Tighter vertical rhythm: the desktop spacing reads as dead air on a small screen */
+  .intro { padding-block: var(--s-7); }
+  .facts { margin-top: var(--s-7); }
+  .section { padding-block: var(--s-7) 0; }
+  .colophon { margin-top: var(--s-8); }
+}
+
+@media (max-width: 559px) {
+  /* Key/value tables stack label over value so long values get the full width */
+  .index div {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--s-1);
+  }
+}
+
 /* ---------- Footer ---------- */
 
 .colophon {
