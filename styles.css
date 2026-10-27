@@ -499,6 +499,31 @@ a.piece:hover h3 { text-decoration: underline; text-underline-offset: 0.2em; tex
   color: var(--muted);
 }
 
+/* Back-to-top: a small square in the corner, hidden until the intro is out of view */
+html { scroll-behavior: smooth; }
+.to-top {
+  position: fixed;
+  right: calc(env(safe-area-inset-right, 0px) + 20px);
+  bottom: calc(env(safe-area-inset-bottom, 0px) + 20px);
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  font-family: var(--mono);
+  font-size: var(--t-base);
+  color: var(--ink);
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  text-decoration: none;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(8px);
+  transition: opacity 0.2s ease, transform 0.2s ease, border-color 0.15s ease;
+}
+.to-top.is-visible { opacity: 1; pointer-events: auto; transform: none; }
+.to-top:hover { border-color: var(--ink); }
+
 @media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
   * { transition: none !important; }
 }

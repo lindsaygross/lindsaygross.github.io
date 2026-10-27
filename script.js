@@ -25,3 +25,11 @@ syncToggleLabel();
 
 const yearEl = document.getElementById('year');
 if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+// Back-to-top button: only show it once the visitor has scrolled past roughly one screen.
+const toTop = document.querySelector('.to-top');
+if (toTop) {
+  const syncToTop = () => toTop.classList.toggle('is-visible', window.scrollY > window.innerHeight * 0.8);
+  window.addEventListener('scroll', syncToTop, { passive: true });
+  syncToTop();
+}
