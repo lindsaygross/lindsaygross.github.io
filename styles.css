@@ -455,6 +455,17 @@ a.piece:hover h3 { text-decoration: underline; text-underline-offset: 0.2em; tex
 }
 .about-text { display: grid; gap: var(--s-4); max-width: var(--measure); }
 
+/* ---------- Longer About page ---------- */
+
+.story-title { margin-top: var(--s-4); }
+.section-body.story {
+  gap: var(--s-4);
+  max-width: var(--measure);
+  border-top: 1px solid var(--rule);
+  padding-top: var(--s-4);
+}
+.section:has(.story) { padding-block: var(--s-7) 0; }
+
 /* ---------- Footer ---------- */
 
 .colophon {
